@@ -270,3 +270,27 @@ export async function GetPersonalInfo(session) {
     return null
   }
 }
+
+export async function GetHostelInfo(session){
+  const ENDPOINT = "/myhostelallocationdetail/gethostelallocationdetail";
+  const payload = {
+    instituteid: session.instituteid,
+  };
+
+  try {
+    const header = await session.get_headers()
+    let resp = await fetch(API + ENDPOINT, {
+      method: "POST",
+      body: JSON.stringify(payload),
+      headers: {
+        "Content-Type": "application/json",
+        ...header
+      }
+    });
+    resp = await resp.json()
+
+    return resp["response"];
+  } catch (e) {
+    return null
+  }
+}
