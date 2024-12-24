@@ -1,6 +1,6 @@
 {
   "name": "jsjiit-server",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A nodejs compatible version of jsjiit. For client side API, use jsjiit",
   "type": "module",
   "main": "index.js",

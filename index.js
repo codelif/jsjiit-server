@@ -247,6 +247,10 @@ export async function StudentLogin(username, password, captcha = DEFCAPTCHA) {
    * @returns {Promise<Object>} Student personal information
  */
 export async function GetPersonalInfo(session) {
+  if (!session) {
+    return null;
+  }
+
   const ENDPOINT = "/studentpersinfo/getstudent-personalinformation";
   const payload = {
     clinetid: "SOAU",
@@ -271,7 +275,17 @@ export async function GetPersonalInfo(session) {
   }
 }
 
-export async function GetHostelInfo(session){
+
+/**
+   * Get hostel allocation information of a student
+   * @param {WebPortalSession} session - Webportal Token
+   * @returns {Promise<Object>} Hostel allocation information
+ */
+export async function GetHostelInfo(session) {
+  if (!session) {
+    return null;
+  }
+
   const ENDPOINT = "/myhostelallocationdetail/gethostelallocationdetail";
   const payload = {
     instituteid: session.instituteid,
