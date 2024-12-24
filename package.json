@@ -1,0 +1,20 @@
+{
+  "name": "jsjiit-server",
+  "version": "1.0.0",
+  "description": "A nodejs compatible version of jsjiit. For client side API, use jsjiit",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codelif/jsjiit-server.git"
+  },
+  "author": "codelif",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codelif/jsjiit-server/issues"
+  },
+  "homepage": "https://github.com/codelif/jsjiit-server#readme"
+}
